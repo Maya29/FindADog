@@ -367,7 +367,8 @@ public class PostDogActivity extends AppCompatActivity {
     }
     private void AddPostToDB() {
 
-        PostADog postADog =new PostADog(mAuth.getUid(),dogBreed.getText().toString(),btnDatePicker.getText().toString(),dogGender.getText().toString(),dogAddress.getText().toString()
+        PostADog postADog =new PostADog(mAuth.getUid(),dogBreed.getText().toString(),btnDatePicker.getText().toString(),
+                dogGender.getText().toString(),dogAddress.getText().toString()
                 ,dogInfo.getText().toString(),Double.parseDouble(dogPrice.getText().toString()),dogPhone.getText().toString(),urlList);
         myRef.push().setValue(postADog);
         progressDialog.dismiss();
